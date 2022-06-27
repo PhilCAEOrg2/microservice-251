@@ -168,6 +168,50 @@ public class Res extends RESTService {
     return null;
   }
 
+  /**
+   * 
+   * postbody
+   *
+   * 
+   * @param body  a JSONObject
+   * 
+   * @return Response 
+   * 
+   */
+  @POST
+  @Path("/postsmt")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.APPLICATION_JSON)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_BAD_REQUEST, message = "res")
+  })
+  @ApiOperation(value = "postbody", notes = " ")
+  public Response postbody(String body) {
+    JSONObject body_JSON = (JSONObject) JSONValue.parse(body);
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // res
+    boolean res_condition = true;
+    if(res_condition) {
+      JSONObject res = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_BAD_REQUEST).entity(res.toJSONString()).build();
+    }
+    return null;
+  }
+
 
 
   }
