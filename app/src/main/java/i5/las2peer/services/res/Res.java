@@ -84,7 +84,7 @@ public class Res extends RESTService {
 
       /**
    * 
-   * gettest
+   * gettest2
    *
    * 
    *
@@ -99,8 +99,8 @@ public class Res extends RESTService {
   @ApiResponses(value = {
        @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "res")
   })
-  @ApiOperation(value = "gettest", notes = " ")
-  public Response gettest() {
+  @ApiOperation(value = "gettest2", notes = " ")
+  public Response gettest2() {
 
 
 
