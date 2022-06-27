@@ -118,6 +118,33 @@ public class ResTest {
 
   /**
    * 
+   * Test for the POSTpostsmtbadrequest(missingbodyproperty)_ID30 method.
+   * 
+   */
+  @Test
+  public void testPOSTpostsmtbadrequest(missingbodyproperty)_ID30() {
+    MiniClientCoverage c = new MiniClientCoverage(mainPath);
+    c.setConnectorEndpoint(connector.getHttpEndpoint());
+    
+        
+    try {
+      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
+      ClientResponse result = c.sendRequest("POST", "/postsmt", """
+{}""", "application/json", "*/*", new HashMap<>(), new Object[0]);
+      System.out.println("Result of request with id: 0: " + result.getResponse().trim());
+    
+      Assert.assertEquals("[0]", 400, result.getHttpCode());
+
+    } catch (Exception e) {
+      e.printStackTrace();
+      fail("Exception: " + e);
+    }
+    
+
+    
+  }
+  /**
+   * 
    * Test for the SimpleGETtest2test_ID11227 method.
    * 
    */
@@ -161,33 +188,6 @@ public class ResTest {
       System.out.println("Result of request with id: 887313: " + result.getResponse().trim());
     
       Assert.assertEquals("[235775]", 404, result.getHttpCode());
-
-    } catch (Exception e) {
-      e.printStackTrace();
-      fail("Exception: " + e);
-    }
-    
-
-    
-  }
-  /**
-   * 
-   * Test for the POSTpostsmtbadrequest(missingbodyproperty)_ID30 method.
-   * 
-   */
-  @Test
-  public void testPOSTpostsmtbadrequest(missingbodyproperty)_ID30() {
-    MiniClientCoverage c = new MiniClientCoverage(mainPath);
-    c.setConnectorEndpoint(connector.getHttpEndpoint());
-    
-        
-    try {
-      c.setLogin(AnonymousAgentImpl.IDENTIFIER, "");
-      ClientResponse result = c.sendRequest("POST", "/postsmt", """
-""", "text/plain", "*/*", new HashMap<>(), new Object[0]);
-      System.out.println("Result of request with id: 0: " + result.getResponse().trim());
-    
-      Assert.assertEquals("[0]", 400, result.getHttpCode());
 
     } catch (Exception e) {
       e.printStackTrace();
