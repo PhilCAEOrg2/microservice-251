@@ -118,11 +118,11 @@ public class ResTest {
 
   /**
    * 
-   * Test for the SimpleGET/test2test_ID11227 method.
+   * Test for the SimpleGETtest2test_ID11227 method.
    * 
    */
   @Test
-  public void testSimpleGET/test2test_ID11227() {
+  public void testSimpleGETtest2test_ID11227() {
     MiniClientCoverage c = new MiniClientCoverage(mainPath);
     c.setConnectorEndpoint(connector.getHttpEndpoint());
     
@@ -145,11 +145,11 @@ public class ResTest {
   }
   /**
    * 
-   * Test for the GET/test/{param}notfoundtest_ID674741 method.
+   * Test for the GETtestparamnotfoundtest_ID674741 method.
    * 
    */
   @Test
-  public void testGET/test/{param}notfoundtest_ID674741() {
+  public void testGETtestparamnotfoundtest_ID674741() {
     MiniClientCoverage c = new MiniClientCoverage(mainPath);
     c.setConnectorEndpoint(connector.getHttpEndpoint());
     
